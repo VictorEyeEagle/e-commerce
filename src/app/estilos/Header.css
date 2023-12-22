@@ -3,6 +3,7 @@
 }
 
 .container {
+  overflow: hidden;
   text-align: center;
   background-color: beige;
   min-height: 100vh;
@@ -12,8 +13,7 @@
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
-
+  color: black;
 }
 
 .topo {
@@ -21,7 +21,7 @@
   padding: 35px 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -36,16 +36,14 @@ input {
 
 .logo {
   width: 200px;
-  position: relative;
-  right: 200px;
+  margin-right: 200px;
 }
 
 .carrinho {
-  position: relative;
-  left: 170px;
+  margin-left: 170px;
+  color: white
 }
 
 Button {
-  position: absolute;
-  left: 200px;
+  margin-left: 200px;
 }
