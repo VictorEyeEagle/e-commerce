@@ -1,0 +1,13 @@
+main {
+    align-items: center;
+    text-align: center;
+}
+
+.categorias {
+    background-color: black;
+    padding: 50px;
+    position: relative;
+    top: 60px;
+    padding-left: 900px;
+    border-radius: 50px;
+}
