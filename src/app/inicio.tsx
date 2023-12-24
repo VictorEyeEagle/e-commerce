@@ -14,19 +14,19 @@ function Main() {
                 <button>
                     <div className='cat'>
                         <img className='img-cat' src='https://images.tcdn.com.br/img/img_prod/1189051/noticia_76899846563fcffa696315.png' />
-                        <p>Roupas Femininas</p>
+                        <p>Roupas Masculinas</p>
                     </div>
                 </button>
                 <button>
                     <div className='cat'>
                         <img className='img-cat' src='https://images.tcdn.com.br/img/img_prod/1189051/noticia_76899846563fcffa696315.png' />
-                        <p>Roupas Femininas</p>
+                        <p>Moda <br/>Infantil</p>
                     </div>
                 </button>
                 <button>
                     <div className='cat'>
                         <img className='img-cat' src='https://images.tcdn.com.br/img/img_prod/1189051/noticia_76899846563fcffa696315.png' />
-                        <p>Roupas Femininas</p>
+                        <p>seilggggggg</p>
                     </div>
                 </button>
                 <button>

@@ -8,17 +8,15 @@ main {
 }
 
 .categorias {
-    display: flex;
-    flex-wrap: wrap;
-    /* Adiciona elementos em uma nova linha quando atingem o limite da tela */
-    justify-content: flex-start;
-    padding: 0px;
-    background-color: white;
-    position: relative;
-    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+    padding: 25px;
+    background-color: gray;
     width: 1000px;
-    border-radius: 50px;
+    margin-top: 50px;
 }
+
 
 .cat {
     font-size: 15px;
