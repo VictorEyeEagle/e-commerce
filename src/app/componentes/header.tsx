@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from './Logo-ecommerce.png'
+import logo from './estilos/Logo-ecommerce.png'
 import { Button, Badge, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import "./estilos/Header.css"

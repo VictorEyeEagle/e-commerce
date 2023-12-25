@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    align-items: center;
+    text-align: center;
+}
+
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+button {
+    padding: 0%;
+    margin: 0%;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0px;
+    padding: 5px;
+    background-color: white;
+    width: 1000px;
+    margin-top: 40px;
+    align-items: start;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+}
+
+.produto {
+    font-size: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave ao efeito */
+}
+
+.img-produto {
+    height: 200px;
+    width: 100%;
+}
+
+.produto:hover {
+    transform: scale(1.2);
+    /* Aumenta o tamanho da imagem em 10% quando o mouse passa sobre ela */
+}
+
+.preco {
+    color: orangered;
+}
+
+.vendidos {
+    font-size: 12px;
+    margin-left: 150px;
+    color: gray;
+}
+
+.tendencia {
+    position: relative;
+    top: 75px;
+    color: brown;
+}
