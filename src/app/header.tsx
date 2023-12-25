@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="topo">
       <Image className='logo' src={logo} alt="Logo" />
-      <input className='pesquisar' placeholder='Pesquisar na e-commerce' />
+      <input type="text" className='pesquisar' placeholder='Pesquisar na e-commerce' />
       <IconButton className='carrinho' aria-label="show cart items" color="inherit">
         <Badge badgeContent={1} color="error">
           <ShoppingCartIcon sx={{ fontSize: 40 }} />
