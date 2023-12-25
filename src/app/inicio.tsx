@@ -116,7 +116,7 @@ function Inicio() {
             </div>
 
 
-
+            <div className='tendencia'><h1>TENDÊNCIAS DO DIA</h1></div>
             <div className='produtos'>
                 <button>
                     <div className='produto'>

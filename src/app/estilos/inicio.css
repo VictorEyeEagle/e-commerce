@@ -64,7 +64,7 @@ button {
     padding: 5px;
     background-color: white;
     width: 1000px;
-    margin-top: 50px;
+    margin-top: 40px;
     align-items: start;
     border-color: gray;
     border-width: 1px;
@@ -74,7 +74,7 @@ button {
 
 .produto {
     font-size: 15px;
-    background-color: gray;
+    background-color: white;
     border-radius: 10px;
     padding: 0px;
     display: flex;
@@ -104,4 +104,18 @@ button {
 .vendidos {
     font-size: 12px;
     margin-left: 150px;
+    color: gray;
+}
+
+.tendencia {
+    background-color: white;
+    position: relative;
+    top: 50px;
+    color: brown;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-left-color: gray;
+    border-right-color: gray;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
 }
