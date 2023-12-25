@@ -4,6 +4,7 @@ import "./estilos/inicio.css"
 function Inicio() {
     return (
         <main>
+            <div className='categoriatitle'><h1>CATEGORIAS</h1></div>
             <div className="categorias">
                 <button>
                     <div className='cat'>

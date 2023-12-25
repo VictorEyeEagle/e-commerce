@@ -14,7 +14,7 @@ main {
     padding: 25px;
     background-color: white;
     width: 1000px;
-    margin-top: 50px;
+    margin-top: 40px;
     align-items: start;
     border-color: gray;
     border-width: 1px;
@@ -70,6 +70,7 @@ button {
     border-width: 1px;
     border-radius: 20px;
     margin-bottom: 50px;
+    padding-top: 25px;
 }
 
 .produto {
@@ -108,14 +109,13 @@ button {
 }
 
 .tendencia {
-    background-color: white;
     position: relative;
-    top: 50px;
+    top: 75px;
     color: brown;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-left-color: gray;
-    border-right-color: gray;
-    border-bottom-width: 1px;
-    border-bottom-color: gray;
+}
+
+.categoriatitle {
+    position: relative;
+    top: 75px;
+    color: brown;
 }
