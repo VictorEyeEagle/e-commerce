@@ -80,7 +80,7 @@ function Inicio() {
                 </button>
                 <button>
                     <div className='cat'>
-                        <img className='img-cat' src='https://vetus.com.br/universidade/wp-content/uploads/2017/05/animais.jpg' />
+                        <img className='img-cat' src='https://www.petz.com.br/blog//wp-content/uploads/2021/11/enxoval-para-gato-Copia.jpg' />
                         <p>Pet Shop</p>
                     </div>
                 </button>
