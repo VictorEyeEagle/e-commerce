@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './header'
-import Main from './inicio'
+import Inicio from './inicio'
 
 function Home() {
   return (
     <div className="container">
       <Header />
-      <Main />
+      <Inicio />
     </div>
   )
 }
