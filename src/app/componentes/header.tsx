@@ -3,11 +3,12 @@ import logo from './estilos/Logo-ecommerce.png'
 import { Button, Badge, IconButton } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import "./estilos/Header.css"
+import Link from 'next/link';
 
 function Header() {
   return (
     <header className="topo">
-      <Image className='logo' src={logo} alt="Logo" />
+      <Link href="\"><Image className='logo' src={logo} alt="Logo" /></Link>
       <input type="text" className='pesquisar' placeholder='Pesquisar na e-commerce' />
       <IconButton className='carrinho' aria-label="show cart items" color="inherit">
         <Badge badgeContent={1} color="error">

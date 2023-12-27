@@ -33,12 +33,12 @@ input {
   border-radius: 10px;
   color: black;
   padding-left: 10px;
+  margin-left: 200px;
 }
 
 
 .logo {
   width: 200px;
-  margin-right: 200px;
 }
 
 .carrinho {
@@ -49,3 +49,4 @@ input {
 Button {
   margin-left: 200px;
 }
+

@@ -4,8 +4,13 @@ import "./estilos/produto.css"
 function Produto() {
     return (
         <main>
-            
+
             <h1>Produto</h1>
+            <div className='produtodetail'>
+            <img className='produtodetail-foto ' src='https://images.tcdn.com.br/img/img_prod/633596/kit_40_cuecas_boxer_men_kit_atacado_kit_revenda_343_1_20200209134533.jpg'/>
+
+            </div>
+
 
             <div className='tendencia'><h1>TENDÊNCIAS DO DIA</h1></div>
             <div className='produtos'>

@@ -44,7 +44,8 @@ main {
 }
 
 .cat:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    background-color: #9dacc4;
     /* Aumenta o tamanho da imagem em 10% quando o mouse passa sobre ela */
 }
 
