@@ -84,3 +84,9 @@ button {
     width: 450px;
     height: 500px;
 }
+
+.classif {
+    position: relative;
+    top: 20px;
+    right: 50px;
+}
