@@ -5,7 +5,7 @@
 .container {
   overflow: hidden;
   text-align: center;
-  background-color: rgb(238, 238, 195);
+  background: linear-gradient(#3b3333 , #EEEEC3 20%);
   min-height: 100vh;
   max-width: 20000vh;
   display: flex;
