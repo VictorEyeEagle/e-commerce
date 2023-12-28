@@ -45,7 +45,6 @@ button {
     margin-top: 5px;
     margin-bottom: 5px;
     transition: transform 0.3s ease;
-    /* Adiciona uma transição suave ao efeito */
 }
 
 .img-produto {
@@ -55,7 +54,6 @@ button {
 
 .produto:hover {
     transform: scale(1.2);
-    /* Aumenta o tamanho da imagem em 10% quando o mouse passa sobre ela */
 }
 
 .preco {
@@ -74,19 +72,82 @@ button {
     color: brown;
 }
 
-
-.produtodetail {
-    background-color: blue;
-}
-
-
-.produtodetail-foto {
-    width: 450px;
-    height: 500px;
-}
-
 .classif {
     position: relative;
     top: 20px;
     right: 50px;
 }
+
+
+.produtodetail {
+    background-color: white;
+    padding-bottom: 100px;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+.foto-info {
+    width: 450px;
+    height: 500px;
+}
+
+.informacoes-produto {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nome-produto-info {
+    margin: 0;
+}
+
+.rating-info {
+    position: relative;
+    right: 100px;
+    top: 15px;
+}
+
+.avaliacoes-info {
+    font-size: 15px;
+    position: relative;
+    bottom: 18px;
+    left: 50px;
+}
+
+.vendidos-info {
+    font-size: 15px;
+    position: relative;
+    bottom: 40px;
+    left: 180px;
+}
+
+.preco-info {
+    color: orangered;
+}
+
+.frete-info {
+    font-size: 20px;
+}
+
+.frete-campo {
+    border-color: darkslategray;
+    border-width: 1px;
+    border-radius: 50px;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+}
+
+.frete-botao {
+    font-size: 15px;
+    background-color: #e0604f;
+    color: white;
+    border-radius: 50px;
+}
+
+.quantidade-info {
+    font-size: 20px;
+}
+
+.comprar-agora-info {}
+
+.add-carrinho-info {}

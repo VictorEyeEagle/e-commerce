@@ -1,11 +1,11 @@
 * {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .container {
   overflow: hidden;
   text-align: center;
-  background-color: beige;
+  background-color: rgb(238, 238, 195);
   min-height: 100vh;
   max-width: 20000vh;
   display: flex;
@@ -25,7 +25,7 @@
   align-items: center;
 }
 
-input {
+.pesquisar {
   height: 35px;
   font-size: large;
   width: 600px;
@@ -33,7 +33,7 @@ input {
   border-radius: 10px;
   color: black;
   padding-left: 10px;
-  margin-left: 200px;
+  margin: 0;
 }
 
 
@@ -42,11 +42,10 @@ input {
 }
 
 .carrinho {
-  margin-left: 170px;
-  color: white
+  margin: 0;
+  color: white;
 }
 
 Button {
-  margin-left: 200px;
+  margin: 0;
 }
-

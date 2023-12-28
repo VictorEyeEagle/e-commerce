@@ -9,7 +9,15 @@ function Header() {
   return (
     <header className="topo">
       <Link href="\"><Image className='logo' src={logo} alt="Logo" /></Link>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       <input type="text" className='pesquisar' placeholder='Pesquisar na e-commerce' />
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       <IconButton className='carrinho' aria-label="show cart items" color="inherit">
         <Badge badgeContent={1} color="error">
           <ShoppingCartIcon sx={{ fontSize: 40 }} />
