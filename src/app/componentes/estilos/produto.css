@@ -122,10 +122,13 @@ button {
 
 .preco-info {
     color: orangered;
+    margin-bottom: 40px;
 }
 
 .frete-info {
     font-size: 20px;
+    margin-bottom: 20px;
+    color: rgb(56, 48, 48);
 }
 
 .frete-campo {
@@ -133,8 +136,9 @@ button {
     border-width: 1px;
     border-radius: 50px;
     width: 200px;
-    justify-content: center;
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .frete-botao {
@@ -142,12 +146,57 @@ button {
     background-color: #e0604f;
     color: white;
     border-radius: 50px;
+    padding: 5px;
+
 }
 
 .quantidade-info {
     font-size: 20px;
+    position: relative;
+    right: 100px;
+    color: rgb(56, 48, 48);
 }
 
-.comprar-agora-info {}
+.quantidade-num {
+    border-color: darkslategray;
+    border-width: 1px;
+    border-radius: 50px;
+    width: 40px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-.add-carrinho-info {}
+.comprar-agora-info {
+    background-color: blue;
+    margin-top: 130px;
+    margin-right: 40px;
+    margin-left: 30px;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 15px;
+
+}
+
+.add-carrinho-info {
+    background-color: chocolate;
+    margin-top: 130px;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    display: inline-flex;
+    position: relative;
+    top: 10px;
+}
+
+.add-carrinho-info img {
+    width: 30px;
+    height: 30px;
+}
+
+.add-carrinho-info p {
+    margin-top: 5px;
+    margin-left: 5px;
+}
