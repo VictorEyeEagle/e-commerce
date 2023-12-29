@@ -147,7 +147,29 @@ button {
     color: white;
     border-radius: 50px;
     padding: 5px;
+    transition: transform .3s;
+}
 
+.frete-botao:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.frete-botao:hover {
+    animation: pulsar 1s infinite;
 }
 
 .quantidade-info {
@@ -176,7 +198,29 @@ button {
     border-radius: 10px;
     padding: 18px;
     font-size: 15px;
+    transition: transform .3s;
+}
 
+.comprar-agora-info:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.comprar-agora-info:hover {
+    animation: pulsar 1s infinite;
 }
 
 .add-carrinho-info {
@@ -189,14 +233,50 @@ button {
     display: inline-flex;
     position: relative;
     top: 10px;
+    transition: transform .3s;
+}
+
+.add-carrinho-info:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.add-carrinho-info:hover {
+    animation: pulsar 1s infinite;
 }
 
 .add-carrinho-info img {
     width: 30px;
     height: 30px;
+
 }
 
 .add-carrinho-info p {
     margin-top: 5px;
     margin-left: 5px;
+}
+
+.desc-produto {
+    background-color: whitesmoke;
+    margin-top: 20px;
+    min-height: 500px;
+    border-radius: 10px;
+}
+
+.desc-produto p {
+    font-size: 15px;
+    max-width: 1000px
 }
