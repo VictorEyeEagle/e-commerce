@@ -1,6 +1,8 @@
+"use client"
+
 import React from 'react'
-import Header from '../componentes/header'
-import InserirProduto from '../componentes/inserirproduto'
+import Header from '@/app/components/header'
+import InserirProduto from '@/app/components/inserirproduto'
 
 function InserirProdutopage() {
   return (
@@ -12,3 +14,4 @@ function InserirProdutopage() {
 }
 
 export default InserirProdutopage
+

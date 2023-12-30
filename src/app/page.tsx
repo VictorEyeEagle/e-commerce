@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './componentes/header'
-import Inicio from './componentes/inicio'
+import Header from './components/header'
+import Inicio from './components/inicio'
 
 function Home() {
   return (
