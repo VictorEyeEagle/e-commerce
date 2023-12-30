@@ -8,4 +8,20 @@
 .inputs {
     margin-top: 20px;
     border-radius: 20px;
+    padding: 0 40px 0 40px;
+    border-color: brown;
+    border-width: 1px;
+}
+
+.inserirvenda-info button {
+    background-color: brown;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    color: aliceblue;
+    border-radius: 20px;
+    transition: transform .3s;
+}
+
+.inserirvenda-info button:hover {
+    transform: scale(1.05);
 }
