@@ -1,31 +1,9 @@
-"use client"
-
 import React from 'react'
 import "./estilos/produto.css"
-import Link from 'next/link'
 import Rating from '@mui/material/Rating'
-import { useState, useEffect } from 'react';
-
-interface Produto {
-    imagemUrl: string;
-    nome: string;
-    preco: number;
-    descricao: string;
-}
 
 
 function Produto() {
-    const [produtos, setProdutos] = useState<Produto[]>([]); // async pra buscar os produtos no DB
-
-    useEffect(() => {
-        const fetchProdutos = async () => {
-            const res = await fetch('/api/mongodb/buscarproduto');
-            const data = await res.json();
-            setProdutos(data);
-        };
-
-        fetchProdutos();
-    }, []);
 
     return (
         <main>
@@ -47,23 +25,6 @@ function Produto() {
             <div className='desc-produto'>
                 <h3>descrição do produto</h3>
                 <p>Um kit de 10 cuecas</p>
-            </div>
-
-            <div className='tendencia'><h1>TENDÊNCIAS DO DIA</h1></div>
-            <div className='produtos'>
-                {produtos.map((produto, index) => (
-                    <div key={index} className='produto'>
-                        <Link href={`/pagproduto`}>
-                            <div className='link-produto'>
-                                <img className='img-produto' src={produto.imagemUrl} alt={`Produto ${index + 1}`} />
-                                <p>{produto.nome}</p>
-                                <p className='preco'>R${produto.preco}</p>
-                                <Rating className='classif' name={`rating-${index}`} defaultValue={4.5} precision={0.5} readOnly />
-                                <p className='vendidos'>{Math.floor(Math.random() * 1000)} vendidos</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
             </div>
         </main>
     )
