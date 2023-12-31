@@ -18,7 +18,7 @@ function InserirProduto() {
     console.log(produto)
 
     // Enviar uma solicitação POST para a rota da API
-    const res = await fetch('/api/mongodb/route', {
+    const res = await fetch('/api/mongodb/inserirproduto', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
