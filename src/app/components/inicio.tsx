@@ -123,7 +123,7 @@ function Inicio() {
             <div className='produtos'>
                 {[...Array(20)].map((_, index) => (
                     <div key={index} className='produto'>
-                        <Link href={`/pages/pagproduto`}>
+                        <Link href={`/pagproduto`}>
                             <div className='link-produto'>
                                 <img className='img-produto' src='https://images.tcdn.com.br/img/img_prod/633596/kit_40_cuecas_boxer_men_kit_atacado_kit_revenda_343_1_20200209134533.jpg' alt={`Produto ${index + 1}`} />
                                 <p>KIT COM 10 CUECAS</p>
