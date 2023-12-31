@@ -1,9 +1,32 @@
+"use client"
+
 import React from 'react'
 import "./estilos/produto.css"
 import Link from 'next/link'
 import Rating from '@mui/material/Rating'
+import { useState, useEffect } from 'react';
+
+interface Produto {
+    imagemUrl: string;
+    nome: string;
+    preco: number;
+    descricao: string;
+}
+
 
 function Produto() {
+    const [produtos, setProdutos] = useState<Produto[]>([]); // async pra buscar os produtos no DB
+
+    useEffect(() => {
+        const fetchProdutos = async () => {
+            const res = await fetch('/api/mongodb/buscarproduto');
+            const data = await res.json();
+            setProdutos(data);
+        };
+
+        fetchProdutos();
+    }, []);
+
     return (
         <main>
             <h1>Produto</h1>
@@ -23,20 +46,20 @@ function Produto() {
             </div>
             <div className='desc-produto'>
                 <h3>descrição do produto</h3>
-                <p>Um kit de 10 cuecas oferece uma variedade de opções para o dia a dia, com peças confortáveis e funcionais. Geralmente feito de algodão ou outros materiais respiráveis, esse conjunto pode incluir diferentes estilos, como boxers, cuecas slip ou sungas, em cores e designs variados. Ideal para garantir conforto, suporte e praticidade ao longo da semana, é uma escolha prática para manter o armário bem abastecido com itens essenciais.Um kit de 10 cuecas oferece uma variedade de opções para o dia a dia, com peças confortáveis e funcionais. Geralmente feito de algodão ou outros materiais respiráveis, esse conjunto pode incluir diferentes estilos, como boxers, cuecas slip ou sungas, em cores e designs variados. Ideal para garantir conforto, suporte e praticidade ao longo da semana, é uma escolha prática para manter o armário bem abastecido com itens essenciais.Um kit de 10 cuecas oferece uma variedade de opções para o dia a dia, com peças confortáveis e funcionais. Geralmente feito de algodão ou outros materiais respiráveis, esse conjunto pode incluir diferentes estilos, como boxers, cuecas slip ou sungas, em cores e designs variados. Ideal para garantir conforto, suporte e praticidade ao longo da semana, é uma escolha prática para manter o armário bem abastecido com itens essenciais.Um kit de 10 cuecas oferece uma variedade de opções para o dia a dia, com peças confortáveis e funcionais. Geralmente feito de algodão ou outros materiais respiráveis, esse conjunto pode incluir diferentes estilos, como boxers, cuecas slip ou sungas, em cores e designs variados. Ideal para garantir conforto, suporte e praticidade ao longo da semana, é uma escolha prática para manter o armário bem abastecido com itens essenciais.Um kit de 10 cuecas oferece uma variedade de opções para o dia a dia, com peças confortáveis e funcionais. Geralmente feito de algodão ou outros materiais respiráveis, esse conjunto pode incluir diferentes estilos, como boxers, cuecas slip ou sungas, em cores e designs variados. Ideal para garantir conforto, suporte e praticidade ao longo da semana, é uma escolha prática para manter o armário bem abastecido com itens essenciais.</p>
+                <p>Um kit de 10 cuecas</p>
             </div>
 
             <div className='tendencia'><h1>TENDÊNCIAS DO DIA</h1></div>
             <div className='produtos'>
-                {[...Array(20)].map((_, index) => (
+                {produtos.map((produto, index) => (
                     <div key={index} className='produto'>
                         <Link href={`/pagproduto`}>
                             <div className='link-produto'>
-                                <img className='img-produto' src='https://images.tcdn.com.br/img/img_prod/633596/kit_40_cuecas_boxer_men_kit_atacado_kit_revenda_343_1_20200209134533.jpg' alt={`Produto ${index + 1}`} />
-                                <p>KIT COM 10 CUECAS</p>
-                                <p className='preco'>R$30,90</p>
+                                <img className='img-produto' src={produto.imagemUrl} alt={`Produto ${index + 1}`} />
+                                <p>{produto.nome}</p>
+                                <p className='preco'>R${produto.preco}</p>
                                 <Rating className='classif' name={`rating-${index}`} defaultValue={4.5} precision={0.5} readOnly />
-                                <p className='vendidos'>350 vendidos</p>
+                                <p className='vendidos'>{Math.floor(Math.random() * 1000)} vendidos</p>
                             </div>
                         </Link>
                     </div>
