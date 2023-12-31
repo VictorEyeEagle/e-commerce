@@ -15,9 +15,10 @@ function InserirProduto() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(produto)
 
     // Enviar uma solicitação POST para a rota da API
-    const res = await fetch('/api/mongodb', {
+    const res = await fetch('/api/mongodb/route', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

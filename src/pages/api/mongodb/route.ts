@@ -15,7 +15,7 @@ const produtoSchema = new mongoose.Schema<IProduto>({
   descricao: String
 });
 
-export const POST = async (req: NextApiRequest, res: NextApiResponse) => {
+const POST = async (req: NextApiRequest, res: NextApiResponse) => {
   // Conecte-se ao seu banco de dados MongoDB
   await mongoose.connect('mongodb://localhost:27017/E-commerce');
 
@@ -31,3 +31,5 @@ export const POST = async (req: NextApiRequest, res: NextApiResponse) => {
 
   res.status(200).json({ message: 'Produto adicionado com sucesso!' });
 };
+
+export default POST
