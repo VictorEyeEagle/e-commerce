@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '@/app/components/header'
-import ProdutoRender from '../../components/produto'
+import ProdutoRender from '@/app/components/produto'
 import Tendencia from '../../components/tendencia'
 
 function PagProduto() {

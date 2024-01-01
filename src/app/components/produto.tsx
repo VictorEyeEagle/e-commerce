@@ -1,46 +1,49 @@
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import Rating from '@mui/material/Rating'
-import "./estilos/produto.css"
+import { usePathname, useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import Rating from '@mui/material/Rating';
+import "./estilos/produto.css";
 
-interface Produto {
-    _id: string;
+interface IProduto {
     imagemUrl: string;
     nome: string;
     preco: number;
     descricao: string;
 }
 
-function ProdutoRender() {
-    const router = useRouter()
-    const { id } = router.query
+export default function ProdutoRender() {
+    const [produto, setProduto] = useState<IProduto | null>(null);
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
-    const [produto, setProduto] = useState<Produto | null>(null)
+    let id: string | null = null;
+    if (searchParams) {
+        id = searchParams.get('id');
+    }
 
     useEffect(() => {
         const fetchProduto = async () => {
-            const res = await fetch(`/api/mongodb/BuscarIDproduto/${id}`)
-            const data: Produto = await res.json()
-            setProduto(data)
-        }
+            if (id) {
+                const res = await fetch(`/api/mongodb/buscarid?id=${id}`);
+                const data: IProduto = await res.json();
+                setProduto(data);
+            }
+        };
 
-        if (id) {
-            fetchProduto()
-        }
-    }, [id])
+        fetchProduto();
+    }, [id]);
 
     if (!produto) {
-        return <div>Carregando...</div>
+        return <div>Carregando...</div>;
     }
 
     return (
         <main>
             <h1>Produto</h1>
             <div className='produtodetail'>
-                <img className='foto-info' src={produto.imagemUrl} alt={produto.nome} />
+                <img className='foto-info' src={produto.imagemUrl} />
                 <div className='informacoes-produto'>
                     <h2 className='nome-produto-info'>{produto.nome}</h2>
-                    <Rating className='rating-info' name={`rating-${produto._id}`} defaultValue={4.5} precision={0.5} readOnly />
+                    <Rating className='rating-info' defaultValue={4.5} precision={0.5} readOnly />
                     <p className='avaliacoes-info'>150 Avaliações</p>
                     <p className='vendidos-info'>350 Vendidos</p>
                     <p className='preco-info'>R${produto.preco}</p>
@@ -57,5 +60,3 @@ function ProdutoRender() {
         </main>
     )
 }
-
-export default ProdutoRender

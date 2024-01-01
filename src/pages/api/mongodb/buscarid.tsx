@@ -21,8 +21,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     await mongoose.connect('mongodb://localhost:27017/E-commerce');
     const Produto: Model<IProduto> = mongoose.models.Produto || mongoose.model<IProduto>('Produto', produtoSchema);
 
-    const produto = await Produto.findById(id);
-    await mongoose.disconnect();
+    if (req.method === 'GET') {
+        const produto = await Produto.findById(id);
+        await mongoose.disconnect();
 
-    res.status(200).json(produto);
+        if (!produto) {
+            res.status(404).json({ message: 'Produto não encontrado' });
+            return;
+        }
+
+        res.status(200).json(produto);
+    }
 };
