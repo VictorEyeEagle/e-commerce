@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import "./estilos/inicio.css"
+import "./estilos/tendencias.css"
 import Link from 'next/link'
 import Rating from '@mui/material/Rating'
 import { useState, useEffect } from 'react';

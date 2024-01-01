@@ -1,5 +1,5 @@
 import React from 'react'
-import "./estilos/inicio.css"
+import "./estilos/categorias.css"
 
 function Categorias() {
 
