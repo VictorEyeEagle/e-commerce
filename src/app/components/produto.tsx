@@ -25,6 +25,7 @@ export default function ProdutoRender() {
             if (id) {
                 const res = await fetch(`/api/mongodb/buscarid?id=${id}`);
                 const data: IProduto = await res.json();
+                console.log(data);
                 setProduto(data);
             }
         };

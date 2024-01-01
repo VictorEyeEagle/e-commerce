@@ -23,6 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (req.method === 'GET') {
         const produto = await Produto.findById(id);
+        console.log(produto);
         await mongoose.disconnect();
 
         if (!produto) {
