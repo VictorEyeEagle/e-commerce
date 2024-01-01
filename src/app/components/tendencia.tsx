@@ -7,6 +7,7 @@ import Rating from '@mui/material/Rating'
 import { useState, useEffect } from 'react';
 
 interface Produto {
+    _id: string;
     imagemUrl: string;
     nome: string;
     preco: number;
@@ -33,7 +34,7 @@ function Tendencia() {
             <div className='produtos'>
                 {produtos.map((produto, index) => (
                     <div key={index} className='produto'>
-                        <Link href={`/pagproduto`}>
+                        <Link href={`/pagproduto/${produto._id}`}>
                             <img className='img-produto' src={produto.imagemUrl} alt={`Produto ${index + 1}`} />
                             <p>{produto.nome}</p>
                             <p className='preco'>R${produto.preco}</p>

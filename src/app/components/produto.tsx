@@ -1,21 +1,49 @@
-import React from 'react'
-import "./estilos/produto.css"
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import Rating from '@mui/material/Rating'
+import "./estilos/produto.css"
 
+interface Produto {
+    _id: string;
+    imagemUrl: string;
+    nome: string;
+    preco: number;
+    descricao: string;
+}
 
-function Produto() {
+function ProdutoRender() {
+    const router = useRouter()
+    const { id } = router.query
+
+    const [produto, setProduto] = useState<Produto | null>(null)
+
+    useEffect(() => {
+        const fetchProduto = async () => {
+            const res = await fetch(`/api/mongodb/BuscarIDproduto/${id}`)
+            const data: Produto = await res.json()
+            setProduto(data)
+        }
+
+        if (id) {
+            fetchProduto()
+        }
+    }, [id])
+
+    if (!produto) {
+        return <div>Carregando...</div>
+    }
 
     return (
         <main>
             <h1>Produto</h1>
             <div className='produtodetail'>
-                <img className='foto-info' src='https://images.tcdn.com.br/img/img_prod/633596/kit_40_cuecas_boxer_men_kit_atacado_kit_revenda_343_1_20200209134533.jpg' />
+                <img className='foto-info' src={produto.imagemUrl} alt={produto.nome} />
                 <div className='informacoes-produto'>
-                    <h2 className='nome-produto-info'>KIT COM 10 CUECAS</h2>
-                    <Rating className='rating-info' name={`rating-{}`} defaultValue={4.5} precision={0.5} readOnly />
+                    <h2 className='nome-produto-info'>{produto.nome}</h2>
+                    <Rating className='rating-info' name={`rating-${produto._id}`} defaultValue={4.5} precision={0.5} readOnly />
                     <p className='avaliacoes-info'>150 Avaliações</p>
                     <p className='vendidos-info'>350 Vendidos</p>
-                    <p className='preco-info'>R$30,90</p>
+                    <p className='preco-info'>R${produto.preco}</p>
                     <p className='frete-info'>calcular frete<input className='frete-campo' placeholder='CEP' /><button><p className='frete-botao'>Calcular</p></button></p>
                     <p className='quantidade-info'>quantidade<input type='number' className='quantidade-num' /></p>
                     <button className='comprar-agora-info'><p>Comprar Agora</p></button>
@@ -24,10 +52,10 @@ function Produto() {
             </div>
             <div className='desc-produto'>
                 <h3>descrição do produto</h3>
-                <p>Um kit de 10 cuecas</p>
+                <p>{produto.descricao}</p>
             </div>
         </main>
     )
 }
 
-export default Produto
+export default ProdutoRender
