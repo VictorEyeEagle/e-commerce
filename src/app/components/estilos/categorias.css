@@ -34,7 +34,6 @@ main {
     margin-top: 5px;
     margin-bottom: 5px;
     transition: transform 0.3s ease;
-    /* Adiciona uma transição suave ao efeito */
 }
 
 .img-cat {
@@ -45,8 +44,6 @@ main {
 
 .cat:hover {
     transform: scale(1.2);
-    background-color: #9dacc4;
-    /* Aumenta o tamanho da imagem em 10% quando o mouse passa sobre ela */
 }
 
 p {

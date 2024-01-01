@@ -47,10 +47,10 @@ function InserirProduto() {
     <div className='inserirvenda-info'>
       <h1>Inserir produto</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="imagemUrl" placeholder="URL da Imagem" className='imagem-info inputs' onChange={handleChange} /><br />
-        <input name="nome" placeholder="Nome" className='nome-info inputs' onChange={handleChange} /><br />
-        <input name="preco" placeholder="Preço" className='preco-info inputs' onChange={handleChange} /><br />
-        <input name="descricao" placeholder="Descrição" className='desc-info inputs' onChange={handleChange} /><br />
+        <input required type="text" name="imagemUrl" placeholder="URL da Imagem" className='imagem-info inputs' onChange={handleChange} /><br />
+        <input required name="nome" placeholder="Nome" className='nome-info inputs' onChange={handleChange} /><br />
+        <input required name="preco" placeholder="Preço" className='preco-info inputs' onChange={handleChange} /><br />
+        <input required name="descricao" placeholder="Descrição" className='desc-info inputs' onChange={handleChange} /><br />
         <button type="submit" className='enviarvenda-info'>Publicar</button>
       </form>
     </div>
