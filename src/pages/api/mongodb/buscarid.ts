@@ -18,15 +18,18 @@ const produtoSchema = new mongoose.Schema<IProduto>({
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.query;
 
+    console.log(`Rota '/api/mongodb/buscarid' acessada com ID: ${id}`);
+
     await mongoose.connect('mongodb://localhost:27017/E-commerce');
     const Produto: Model<IProduto> = mongoose.models.Produto || mongoose.model<IProduto>('Produto', produtoSchema);
 
     if (req.method === 'GET') {
         const produto = await Produto.findById(id);
-        console.log(produto);
+        console.log('Produto encontrado:', produto);
         await mongoose.disconnect();
 
         if (!produto) {
+            console.log('Produto não encontrado');
             res.status(404).json({ message: 'Produto não encontrado' });
             return;
         }
