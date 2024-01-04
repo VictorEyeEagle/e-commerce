@@ -1,6 +1,6 @@
 "use client"
 
-import { useRouter, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import React from 'react';
 import Header from '@/app/components/header';
 import ProdutoRender from '@/app/components/produto';
