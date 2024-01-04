@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Rating from '@mui/material/Rating';
-import { useSearchParams } from 'next/navigation';
 import "./estilos/produto.css";
 
 interface IProduto {
@@ -11,12 +10,11 @@ interface IProduto {
 }
 
 interface ProdutoRenderProps {
-  id: string | null;
+    id: string | null;
 }
 
 export default function ProdutoRender({ id }: ProdutoRenderProps) {
     const [produto, setProduto] = useState<IProduto | null>(null);
-    const searchParams = useSearchParams();
 
     useEffect(() => {
         const fetchProduto = async () => {
