@@ -5,12 +5,70 @@
 }
 
 .botao {
-   background-color: black;
-   margin: 10px;
-   padding: 15px;
-   border-radius: 20px;
+    background-color: rgb(91, 5, 5);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.botao.ativo {
+    background-color: #FFD700;
+}
+
+.botao:active {
+    transform: scale(0.80);
+    transition: all 0.1s;
 }
 
 .botao h2 {
     color: white;
+}
+
+.entrar,
+.registrar {
+    display: grid
+}
+
+.input {
+    margin-top: 20px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 1px;
+    border-color: brown;
+}
+
+.entrar button,
+.registrar button {
+    background-color: rgb(91, 5, 5);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 25px;
+    transition: transform .3s;
+}
+
+.entrar button:hover,
+.registrar button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.entrar button:hover,
+.registrar button:hover {
+    animation: pulsar 1s infinite;
 }
