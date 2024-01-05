@@ -44,7 +44,7 @@ export default function ProdutoRender({ id }: ProdutoRenderProps) {
                     <p className='avaliacoes-info'>150 Avaliações</p>
                     <p className='vendidos-info'>350 Vendidos</p>
                     <p className='preco-info'>R${produto.preco}</p>
-                    <p className='frete-info'>calcular frete<input className='frete-campo' placeholder='CEP' /><button><p className='frete-botao'>Calcular</p></button></p>
+                    <p className='frete-info'>calcular frete<input className='frete-campo' placeholder='CEP' maxLength={8} /><button><p className='frete-botao'>Calcular</p></button></p>
                     <p className='quantidade-info'>quantidade<input type='number' className='quantidade-num' /></p>
                     <button className='comprar-agora-info'><p>Comprar Agora</p></button>
                     <button className='add-carrinho-info'><img className='carrinho-img' src='https://cdn-icons-png.flaticon.com/128/3825/3825056.png' /><p>Adicionar ao Carrinho</p></button>

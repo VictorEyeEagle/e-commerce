@@ -23,9 +23,9 @@ function Header() {
           <ShoppingCartIcon sx={{ fontSize: 40 }} />
         </Badge>
       </IconButton>
-      <Button variant="contained" color="secondary">
+      <Link href="\loginregistro"><Button variant="contained" color="secondary">
         Logar
-      </Button>
+      </Button></Link>
     </header>
   )
 }
