@@ -1,41 +1,41 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
-import "./estilos/carrinhost.css"
+import styles from "./estilos/carrinhost.module.css"
 
 function Carrinho() {
     return (
-        <div className='container'>
-            <h1 className='titulo'>Carrinho</h1>
-            <div className='conteudo'>
-                <div className='produto'>
-                    <img className='imagem' />
-                    <div className='detalhes'>
-                        <h2 className='nome'>nome</h2>
+        <div className={styles.container}>
+            <h1 className={styles.titulo}>Carrinho</h1>
+            <div className={styles.conteudo}>
+                <div className={styles.produto}>
+                    <img className={styles.imagem} />
+                    <div className={styles.detalhes}>
+                        <h2 className={styles.nome}>nome</h2>
                         <Rating defaultValue={4.5} precision={0.5} readOnly />
-                        <p className='avaliacoes'>150 Avaliações</p>
-                        <p className='vendidos'>350 Vendidos</p>
-                        <p className='preco'>R$</p>
-                        <div className='quantidade'>
-                            <input type='number' className='input' />
-                            <button className='botao'>Remover</button>
+                        <p className={styles.avaliacoes}>150 Avaliações</p>
+                        <p className={styles.vendidos}>350 Vendidos</p>
+                        <p className={styles.preco}>R$</p>
+                        <div className={styles.quantidade}>
+                            <input type='number' className={styles.input} />
+                            <button className={styles.botao}>Remover</button>
                         </div>
                     </div>
                 </div>
-                <div className='resumo'>
-                    <h2 className='subtitulo'>Resumo do Pedido</h2>
-                    <div className='subtotal'>
-                        <p className='texto'>Subtotal:</p>
-                        <p className='valor'>R$</p>
+                <div className={styles.resumo}>
+                    <h2 className={styles.subtitulo}>Resumo do Pedido</h2>
+                    <div className={styles.subtotal}>
+                        <p className={styles.texto}>Subtotal:</p>
+                        <p className={styles.valor}>R$</p>
                     </div>
-                    <div className='frete'>
-                        <p className='texto'>Frete:</p>
-                        <p className='valor'>R$</p>
+                    <div className={styles.frete}>
+                        <p className={styles.texto}>Frete:</p>
+                        <p className={styles.valor}>R$</p>
                     </div>
-                    <div className='total'>
-                        <p className='texto'>Total:</p>
-                        <p className='valor'>R$</p>
+                    <div className={styles.total}>
+                        <p className={styles.texto}>Total:</p>
+                        <p className={styles.valor}>R$</p>
                     </div>
-                    <button className='botao'>Finalizar Compra</button>
+                    <button className={styles.botao}>Finalizar Compra</button>
                 </div>
             </div>
         </div>
