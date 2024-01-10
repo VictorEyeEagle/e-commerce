@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
 import styles from "./estilos/carrinhost.module.css"
+import Button from '@mui/material/Button';
 
 function Carrinho() {
     return (
@@ -17,7 +18,7 @@ function Carrinho() {
                         <p className={styles.preco}>R$</p>
                         <div className={styles.quantidade}>
                             <input type='number' className={styles.input} />
-                            <button className={styles.botao}>Remover</button>
+                            <Button className={styles.botao} variant="contained" color="secondary">Remover</Button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +36,7 @@ function Carrinho() {
                         <p className={styles.texto}>Total:</p>
                         <p className={styles.valor}>R$</p>
                     </div>
-                    <button className={styles.botao}>Finalizar Compra</button>
+                    <Button className={styles.botao} variant="contained" color="primary">Finalizar Compra</Button>
                 </div>
             </div>
         </div>

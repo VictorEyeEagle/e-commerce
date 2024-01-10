@@ -1,4 +1,12 @@
-
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 50px;
+}
 
 .titulo {
     font-size: 36px;
@@ -20,7 +28,9 @@
     margin: 10px 0;
 }
 
-.avaliacoes, .vendidos, .preco {
+.avaliacoes,
+.vendidos,
+.preco {
     font-size: 18px;
     color: #666;
     margin: 5px 0;
@@ -37,9 +47,13 @@
     width: 100px;
     height: 40px;
     border: none;
-    background-color: #f00;
-    color: #fff;
     cursor: pointer;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.botao:first-of-type {
+    margin-left: 10px;
 }
 
 .conteudo {
@@ -84,7 +98,9 @@
     text-align: center;
 }
 
-.subtotal, .frete, .total {
+.subtotal,
+.frete,
+.total {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -104,6 +120,6 @@
     margin: 5px 0;
 }
 
-.resumo > .botao {
+.resumo>.botao {
     margin-top: 20px;
 }
