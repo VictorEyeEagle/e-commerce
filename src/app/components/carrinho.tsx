@@ -1,43 +1,45 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
-import "./estilos/carrinho.css"
+import "./estilos/carrinhost.css"
 
-export default function Carrinho() {
+function Carrinho() {
     return (
         <div className='container'>
             <h1 className='titulo'>Carrinho</h1>
-            <div>
-                <div>
-                    <img />
-                    <div>
-                        <h2>nome</h2>
+            <div className='conteudo'>
+                <div className='produto'>
+                    <img className='imagem' />
+                    <div className='detalhes'>
+                        <h2 className='nome'>nome</h2>
                         <Rating defaultValue={4.5} precision={0.5} readOnly />
-                        <p>150 Avaliações</p>
-                        <p>350 Vendidos</p>
-                        <p>R$</p>
-                        <div>
-                            <input type='number' />
-                            <button>Remover</button>
+                        <p className='avaliacoes'>150 Avaliações</p>
+                        <p className='vendidos'>350 Vendidos</p>
+                        <p className='preco'>R$</p>
+                        <div className='quantidade'>
+                            <input type='number' className='input' />
+                            <button className='botao'>Remover</button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Resumo do Pedido</h2>
-                    <div>
-                        <p>Subtotal:</p>
-                        <p>R$</p>
+                <div className='resumo'>
+                    <h2 className='subtitulo'>Resumo do Pedido</h2>
+                    <div className='subtotal'>
+                        <p className='texto'>Subtotal:</p>
+                        <p className='valor'>R$</p>
                     </div>
-                    <div>
-                        <p>Frete:</p>
-                        <p>R$</p>
+                    <div className='frete'>
+                        <p className='texto'>Frete:</p>
+                        <p className='valor'>R$</p>
                     </div>
-                    <div>
-                        <p>Total:</p>
-                        <p>R$</p>
+                    <div className='total'>
+                        <p className='texto'>Total:</p>
+                        <p className='valor'>R$</p>
                     </div>
-                    <button>Finalizar Compra</button>
+                    <button className='botao'>Finalizar Compra</button>
                 </div>
             </div>
         </div>
     )
 }
+
+export default Carrinho;

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import Carrinho from "../components/carrinho";
 
-export default function Carrinhopage() {
+function Carrinhopage() {
     return (
         <div className="container">
             <Header />
@@ -10,3 +10,5 @@ export default function Carrinhopage() {
         </div>
     )
 }
+
+export default Carrinhopage;
