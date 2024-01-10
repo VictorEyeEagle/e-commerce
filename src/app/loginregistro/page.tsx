@@ -1,9 +1,11 @@
 import React from "react";
 import Loginregistro from "../components/LoginRegistro";
+import Header from "../components/header";
 
 function LoginRegistroPage() {
-    return(
+    return (
         <div className="container">
+            <Header />
             <Loginregistro />
         </div>
     )
