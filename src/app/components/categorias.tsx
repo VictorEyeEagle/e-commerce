@@ -5,7 +5,7 @@ function Categorias() {
 
     const categorias = [
         {
-            imgSrc: 'https://images.tcdn.com.br/img/img_prod/1189051/noticia_76899846563fcffa696315.png',
+            imgSrc: 'https://d2r9epyceweg5n.cloudfront.net/stores/002/043/732/products/2b5483da247813b6458752ec3fe62284-a4fe47dec0912f1ff216491791177845-640-0.jpg',
             nome: 'Roupas Femininas'
         },
         {
