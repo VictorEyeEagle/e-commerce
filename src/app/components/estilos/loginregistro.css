@@ -13,16 +13,11 @@
     background-color: rgb(91, 5, 5);
     margin: 10px;
     padding: 2px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .botao.ativo {
     background-color: #FFD700;
-}
-
-.botao:active {
-    transform: scale(0.80);
-    transition: all 0.1s;
 }
 
 .botao h2 {

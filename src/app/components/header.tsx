@@ -18,11 +18,11 @@ function Header() {
       <span></span>
       <span></span>
       <span></span>
-      <IconButton className='carrinho' aria-label="show cart items" color="inherit">
+      <Link href="\carrinho"><IconButton className='carrinho' aria-label="show cart items" color="inherit">
         <Badge badgeContent={1} color="error">
           <ShoppingCartIcon sx={{ fontSize: 40 }} />
         </Badge>
-      </IconButton>
+      </IconButton></Link>
       <Link href="\loginregistro"><Button variant="contained" color="secondary">
         Logar
       </Button></Link>
