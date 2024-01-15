@@ -41,7 +41,7 @@ function Categorias() {
             nome: 'Esportes e Fitness'
         },
         {
-            imgSrc: 'https://www.bienaldolivrojf.com.br/wp-content/uploads/2023/06/Fotos-10-livros-coloridos-mesa-iniciante.webp',
+            imgSrc: 'https://s2.static.brasilescola.uol.com.br/img/2019/10/dia-do-livro.jpg',
             nome: 'Livros'
         },
         {
