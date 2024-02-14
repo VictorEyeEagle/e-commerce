@@ -13,7 +13,7 @@ function Header() {
       <span></span>
       <span></span>
       <span></span>
-      <input type="text" className='pesquisar' placeholder='Pesquisar na e-commerce' />
+      <input type="text" className='pesquisar' placeholder='Pesquisar na e-commerce ' />
       <span></span>
       <span></span>
       <span></span>
